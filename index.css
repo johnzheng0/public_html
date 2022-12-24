@@ -1,0 +1,213 @@
+:root {
+    --imageViewerWidth: 1920px;
+    --imageViewerHeight: 1080px;
+    --mobileThreshold: 1000px;
+}
+
+html, body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    margin: 0;
+    padding: 0;
+    padding-bottom: 2000px;
+    background-color: black;
+    background-image: url("assets/banner.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-repeat: no-repeat;
+    max-width: 100%;
+}
+a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ }
+ .spacer {
+    height: 20em;
+ }
+
+#navbar {
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+
+    height: 2em;
+    position: fixed;
+    width: 100%;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    backdrop-filter: blur(1em);
+    font-size: 2em;
+}
+.navbarItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+    
+    margin: 2em;
+
+    width: 100%;
+}
+.navbarItems .menu {
+    display: none;
+    align-self: center;
+    
+    filter: grayscale(1) brightness(6);
+    transition: all ease 200ms;
+}
+.navbarItems .menu:hover {
+    filter: grayscale(0);
+}
+.navbarItems a {
+    color: white;
+    transition: all ease 200ms;
+}
+.navbarItems a:hover {
+    color: red;
+}
+.navbarItems .home {
+    margin-right: auto;
+}
+@media (max-width: 1000px) {
+    #navbar {height: 3.5em}
+    .navbarItems {margin: 1em}
+    .navbarItems a {display: none}
+    .navbarItems .home {display: block; font-size: 2em}
+    .navbarItems .menu {display: flex}
+    body {background-size: 200%}
+}
+
+#banner {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-size: 2em;
+}
+#banner .badInspiration {
+    color: white;
+    text-align: center;
+    margin-bottom: 1em;
+}
+#banner .bannerButton {
+    width: fit-content;
+    padding: 0.2em 1em;
+    border: 4px solid white;
+    transition: padding 500ms cubic-bezier(1, 0.1, 0.1, 1);
+}
+#banner .bannerButton:hover {
+    padding: 0.2em 2em;
+    background-color: white;
+    color: black;
+}
+
+#imageViewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    width: 100%;
+}
+#imageViewer #viewMain {
+    width: var(--imageViewerWidth);
+    height: var(--imageViewerHeight);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+#imageViewer .imageMain {
+    z-index: 1;
+    width: 60%;
+    height: 100%;
+    border-radius : 32px;
+    
+    box-shadow: 0.2em 0.2em 0.5em black;
+}
+#imageViewer #imageMainFader {
+    z-index: 0;
+    position: relative;
+    top: calc(var(--imageViewerHeight)/2);
+}
+#imageViewer #viewMinor {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+
+    width: fit-content;
+    height: 50px;
+}
+#imageViewer #viewMinor img {
+    width: 20%;
+    height: 100%;
+    image-rendering: pixelated;
+}
+@media (max-width: 1000px) {
+    #imageViewer #viewMain {
+        margin: 1em 0em;
+        width: calc(var(--imageViewerWidth)/2);
+        height: calc(var(--imageViewerHeight));
+    }
+    #imageViewer #viewMinor {
+        height: 80px;
+    }
+    #imageViewer .imageMain {
+        width: 90%;
+    }
+    #imageViewer #imageMainFader {
+        top: calc(var(--imageViewerHeight)/2);
+    }
+    #imageViewer {
+        display: none;
+    }
+}
+
+/* #imageViewer .imageViewerGrid {
+    margin-top: 00em;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    width: 240%;
+    left: -150%;
+}
+#imageViewer img {
+    position: relative;
+    width: 100%;
+    height: 50%;
+    align-self: center;
+}
+#imageViewer .imageSide {
+    z-index: 1;
+}
+#imageViewer .imageBlack {
+    z-index: 2;
+    transform: translateX(100%);
+} */
+
+/* #container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+    grid-gap: 16px;
+
+    margin-left: auto;
+    margin-right: auto;
+    width: fit-content;
+    padding: 10px;
+    padding-top: 100px;
+}
+#container img {
+    max-width: 100%;
+} */
