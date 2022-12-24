@@ -14,6 +14,7 @@ body {
     background-repeat: no-repeat;
     background-size: 100%;
     background-repeat: no-repeat;
+    object-fit: cover;
     max-width: 100%;
 }
 a {
@@ -132,6 +133,7 @@ a {
     width: 60%;
     height: calc(var(--imageViewerHeight)/2);
     border-radius : 32px;
+    object-fit: cover;
     
     box-shadow: 0.2em 0.2em 0.5em black;
 }
@@ -149,9 +151,10 @@ a {
     height: 50px;
 }
 #imageViewer #viewMinor img {
-    width: 20%;
+    width: 15%;
     height: 100%;
-    image-rendering: pixelated;
+    image-rendering: optimizeSpeed;
+    object-fit: cover;
 }
 @media (max-width: 1000px) {
     #imageViewer #viewMain {
@@ -167,9 +170,6 @@ a {
     }
     #imageViewer #imageMainFader {
         top: calc(var(--imageViewerHeight)/2);
-    }
-    #imageViewer {
-        display: none;
     }
 }
 

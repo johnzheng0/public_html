@@ -28,6 +28,7 @@ let duration = {
 //use animations to change out the main image
 function changeImage(source) {
   imageMainFader.setAttribute("src", source)
+//   imageMainFader.setAttribute("width", (100/imageTotal)+"%")
   imageMain.animate(fadeOut, duration)
   setTimeout(function() {
     imageMain.setAttribute("src", source)
