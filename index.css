@@ -127,16 +127,16 @@ a {
     flex-direction: column;
 }
 #imageViewer .imageMain {
+    position: relative;
     z-index: 1;
     width: 60%;
-    height: 100%;
+    height: calc(var(--imageViewerHeight)/2);
     border-radius : 32px;
     
     box-shadow: 0.2em 0.2em 0.5em black;
 }
 #imageViewer #imageMainFader {
     z-index: 0;
-    position: relative;
     top: calc(var(--imageViewerHeight)/2);
 }
 #imageViewer #viewMinor {
