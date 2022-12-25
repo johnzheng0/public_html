@@ -1,6 +1,3 @@
-//static constants
-const directory = "assets/slideshow/"
-
 //get objects
 let imageMain = document.getElementById("imageMain")
 let imageMainFader = document.getElementById("imageMainFader")
@@ -38,16 +35,18 @@ function changeImage(source) {
 for (let i=imageIndex; i<=imageTotal; i++) {
     //create img element and append it under the main view image
     let imageMinor = document.createElement("img")
-    imageMinor.setAttribute("src", directory+i+".jpg")
+    imageMinor.setAttribute("src", "images/thumbnails/"+i+".jpg")
     viewMinor.appendChild(imageMinor)
+
+    console.log()
 
     //assign event actions to subview images
     imageMinor.addEventListener("mouseover", function() {
-    changeImage(imageMinor.src)
+    changeImage("images"+imageMinor.src.slice(imageMinor.src.lastIndexOf("/")))
     })
     imageMinor.addEventListener("mousedown", function() {
     if (event.button == 0) {
-        changeImage(imageMinor.src)
+        changeImage("images"+imageMinor.src.slice(imageMinor.src.lastIndexOf("/")))
     }
     })
 
