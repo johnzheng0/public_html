@@ -33,6 +33,7 @@ a {
     height: 20em;
  }
 
+/* navbar and navbar items */
 #navbar {
     z-index: 100;
 
@@ -86,7 +87,33 @@ a {
     .navbarItems .menu {display: flex}
     body {background-size: 200%}
 }
+/* menubar and menubar items */
+#menubar {
+    z-index: 99;
+    display: none;
 
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2em);
+    width: 100%;
+    height: 100%;
+}
+#menubar .menubarItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+    padding: 4em 4em;
+}
+#menubar .menubarItems a {
+    color: white;
+    font-size: 2em;
+}
+
+/* fake inspirational text */
 #banner {
     display: flex;
     justify-content: center;
@@ -112,6 +139,7 @@ a {
     color: black;
 }
 
+/* imageViewer with a main view and tab subview */
 #imageViewer {
     display: flex;
     flex-direction: column;
@@ -142,16 +170,16 @@ a {
     top: calc(var(--imageViewerHeight)/2);
 }
 #imageViewer #viewMinor {
-    display: flex;
+    display: grid;
     justify-content: center;
     align-items: center;
     gap: 2px;
 
-    width: fit-content;
+    width: calc(var(--imageViewerWidth)/3);
     height: 50px;
 }
 #imageViewer #viewMinor img {
-    width: 15%;
+    width: 100%;
     height: 100%;
     image-rendering: optimizeSpeed;
     object-fit: cover;
@@ -173,6 +201,7 @@ a {
     }
 }
 
+/* footer */
 footer {
     margin-top: 100px;
     height: 200px;
