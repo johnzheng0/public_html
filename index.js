@@ -68,7 +68,7 @@ let flyOut = [
     { transform: "translateY(-100%)" }
 ]
 let flyDuration = {
-    duration: 600,
+    duration: 400,
     easing: "cubic-bezier(1, 0.1, 0.1, 1)",
     iteration: 1
 }

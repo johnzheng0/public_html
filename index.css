@@ -67,9 +67,9 @@ a {
     filter: grayscale(1) brightness(6);
     transition: all ease 200ms;
 }
-.navbarItems .menu:hover {
+/* .navbarItems .menu:hover {
     filter: grayscale(0);
-}
+} */
 .navbarItems a {
     color: white;
     transition: all ease 200ms;
