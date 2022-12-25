@@ -178,7 +178,6 @@ a {
     display: grid;
     justify-content: center;
     align-items: center;
-    gap: 2px;
 
     width: calc(var(--imageViewerWidth)/3);
     height: 50px;
