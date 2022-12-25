@@ -120,7 +120,7 @@ a {
     align-items: center;
     flex-direction: column;
 
-    margin-top: 25%;
+    margin-top: 10em;
 
     font-size: 2em;
 }
@@ -141,7 +141,10 @@ a {
     color: black;
 }
 @media (max-width: 1000px) {
-    #banner {font-size: 3em;}
+    #banner {
+        font-size: 3em;
+        margin-top: 5em;
+    }
 }
 
 /* imageViewer with a main view and tab subview */
