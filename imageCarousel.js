@@ -8,6 +8,9 @@ let viewMinor = document.getElementById("viewMinor")
 let imageIndex = 1
 let imageTotal = 6
 
+//define array that holds images that need to be preloaded
+let preloadImages = []
+
 //initialize selection view
 viewMinor.style.gridTemplateColumns = "repeat("+imageTotal+", 1fr)"
 
@@ -37,17 +40,18 @@ for (let i=imageIndex; i<=imageTotal; i++) {
     let imageMinor = document.createElement("img")
     imageMinor.setAttribute("src", "images/thumbnails/"+i+".jpg")
     viewMinor.appendChild(imageMinor)
-
-    console.log()
+    
+    //image preload
+    preloadImages.push(new Image().src="images"+imageMinor.src.slice(imageMinor.src.lastIndexOf("/")))
 
     //assign event actions to subview images
     imageMinor.addEventListener("mouseover", function() {
-    changeImage("images"+imageMinor.src.slice(imageMinor.src.lastIndexOf("/")))
+        changeImage("images"+imageMinor.src.slice(imageMinor.src.lastIndexOf("/")))
     })
     imageMinor.addEventListener("mousedown", function() {
-    if (event.button == 0) {
-        changeImage("images"+imageMinor.src.slice(imageMinor.src.lastIndexOf("/")))
-    }
+        if (event.button == 0) {
+            changeImage("images"+imageMinor.src.slice(imageMinor.src.lastIndexOf("/")))
+        }
     })
 
     //ensure ends are rounded
