@@ -1,0 +1,130 @@
+/* intended to be used in all pages */
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: bold;
+
+    margin: 0;
+    padding: 0;
+    max-width: 100%;
+    overflow-x: hidden;
+
+    background-color: black;
+    background-image: url("assets/banner.png");
+    background-repeat: no-repeat;
+    background-size: 100%;
+    object-fit: cover;
+    
+}
+a {
+    color: white;
+    text-decoration: none;
+    text-align: center;
+}
+.unselectable {
+    -moz-user-select: -moz-none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+ }
+
+ /* defines navbar and navbar related items */
+#navbar {
+    z-index: 100;
+
+    display: flex;
+    align-items: center;
+    position: fixed;
+
+    width: 100%;
+    height: 2em;
+
+    background-color: rgba(0, 0, 0, 0.5);
+    color: white;
+    backdrop-filter: blur(1em);
+    font-size: 2em;
+}
+.navbarItems {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    margin: 2em;
+    gap: 0.5em;
+
+    width: 100%;
+}
+.navbarItems .menu {
+    display: none;
+    align-self: center;
+
+    margin-right: 1em;
+}
+.navbarItems a {
+    color: white;
+    transition: all ease 200ms;
+}
+.navbarItems a:hover {
+    color: red;
+}
+.navbarItems .home {
+    margin-right: auto;
+}
+/* menubar and menubar related items */
+#menubar {
+    z-index: 99;
+    display: none;
+
+    position: fixed;
+    background-color: rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(2em);
+    width: 100%;
+    height: 100%;
+}
+#menubar .menubarItems {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    font-size: 2em;
+    width: 100%;
+    height: 100%;
+    padding: 4em 5em;
+}
+#menubar .menubarItems a {
+    color: white;
+    font-size: 2em;
+}
+
+/* footer and footer related items */
+footer {
+    margin-top: 100px;
+    height: 200px;
+    background-color: black;
+
+    font-size: 2em;
+}
+footer .divider {
+    background-color: white;
+    height: 2px;
+    width: 100%;
+}
+.footerContainer {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+
+    margin: 0em 2em;
+}
+.footerContainer .home {
+    color: white;
+}
+
+/* mobile support */
+@media (max-width: 1000px) {
+    #navbar {height: 3.5em}
+    .navbarItems {margin: 1em}
+    .navbarItems a {display: none}
+    .navbarItems .home {display: block; font-size: 2em}
+    .navbarItems .menu {display: flex}
+    body {background-size: 200%}
+}

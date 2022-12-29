@@ -1,0 +1,69 @@
+/* variables */
+:root {
+    --imageViewerWidth: 1920px;
+    --imageViewerHeight: 1080px;
+}
+
+/* imageViewer with a main view and tab subview */
+#imageViewer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1em;
+    
+    width: 100%;
+}
+#imageViewer #viewMain {
+    width: var(--imageViewerWidth);
+    height: var(--imageViewerHeight);
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    flex-direction: column;
+}
+#imageViewer .imageMain {
+    position: relative;
+    z-index: 1;
+    width: 60%;
+    height: calc(var(--imageViewerHeight)/2);
+    border-radius : 32px;
+    object-fit: cover;
+    
+    box-shadow: 0.2em 0.2em 0.5em black;
+}
+#imageViewer #imageMainFader {
+    z-index: 0;
+    top: calc(var(--imageViewerHeight)/2);
+}
+#imageViewer #viewMinor {
+    display: grid;
+    justify-content: center;
+    align-items: center;
+
+    width: calc(var(--imageViewerWidth)/3);
+    height: 50px;
+}
+#imageViewer #viewMinor img {
+    width: 100%;
+    height: 100%;
+    image-rendering: optimizeSpeed;
+    object-fit: cover;
+}
+
+/* mobile support */
+@media (max-width: 1000px) {
+    #imageViewer #viewMain {
+        margin: 1em 0em;
+        width: calc(var(--imageViewerWidth)/2);
+        height: calc(var(--imageViewerHeight));
+    }
+    #imageViewer #viewMinor {
+        height: 80px;
+    }
+    #imageViewer .imageMain {
+        width: 90%;
+    }
+    #imageViewer #imageMainFader {
+        top: calc(var(--imageViewerHeight)/2);
+    }
+}
