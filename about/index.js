@@ -7,7 +7,9 @@ function loadScript(url)
     head.appendChild(script)
 }
 
-loadScript("../global.js")
+window.onload = function() {
+        loadScript("../global.js")
+}
 
 function include(element) {
     let newelem = document.createElement("div")
