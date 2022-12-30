@@ -10,9 +10,10 @@ body {
     overflow-x: hidden;
 
     background-color: black;
-    background-image: url("assets/banner.png");
+    background-image: url("assets/banner.webp");
     background-repeat: no-repeat;
     background-size: 100%;
+    image-rendering: optimizeSpeed;
     object-fit: cover;
     
 }
