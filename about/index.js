@@ -1,12 +1,26 @@
-window.onload = function () {
-    let includes = document.getElementsByClassName("include")
-    for (let i=includes.length-1; i>=0; i--) {
-        fetch(includes[0].href)
-        .then(res => res.text())
-        .then(text => {
-            let newelem = document.createElement("div")
+function include(element) {
+    console.log(element)
+    let newelem = document.createElement("div")
+    fetch(element.href)
+    .then(res => res.text())
+    .then(text => {
             newelem.innerHTML = text
-            includes[0].parentNode.replaceChild(newelem,includes[0])
-        })
+            element.parentNode.replaceChild(newelem,element)
+    let index = Array.from(newelem.parentNode.children).indexOf(newelem)
+    let newelemchildren = newelem.childNodes
+    for (let i=0; i<newelemchildren.length; i++) {
+            newelem.parentNode.insertBefore(newelemchildren[i],newelem)
+    }
+    newelem.parentNode.removeChild(newelem)
+    })
+
+}
+
+window.onload = function() {
+    let includes = document.getElementsByClassName("include")
+    console.log(includes)
+    for (let i=0; i<includes.length; i++) {
+            include(includes[i])
     }
 }
+
