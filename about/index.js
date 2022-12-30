@@ -1,6 +1,6 @@
 window.onload = function () {
     let includes = document.getElementsByClassName("include")
-    while (includes.length > 0) {
+    for (let i=includes.length-1; i>=0; i--) {
         fetch(includes[0].href)
         .then(res => res.text())
         .then(text => {
