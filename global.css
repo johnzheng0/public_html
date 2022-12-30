@@ -76,8 +76,10 @@ a {
 #menubar {
     z-index: 99;
     display: none;
-
     position: fixed;
+
+    top: 0em;
+
     background-color: rgba(0, 0, 0, 0.5);
     backdrop-filter: blur(2em);
     width: 100%;
