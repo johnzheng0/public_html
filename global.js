@@ -1,3 +1,5 @@
+console.log("global.js loaded")
+
 //get page elements
 let menubar = document.getElementById("menubar")
 let menu = document.getElementsByClassName("menu")[0]
