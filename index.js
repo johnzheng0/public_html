@@ -7,7 +7,5 @@ function loadScript(url)
     head.appendChild(script)
 }
 
-window.onload = function() {
-    loadScript("global.js")
-    loadScript("imageCarousel.js")
-}
+loadScript("global.js")
+loadScript("imageCarousel.js")
