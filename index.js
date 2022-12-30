@@ -7,17 +7,5 @@ function loadScript(url)
     head.appendChild(script)
 }
 
-
-window.addEventListener("scroll", function() {
-    document.body.style.backgroundPositionY = scrollY*0.6 + "px"
-    if (scrollY > 10) {
-        document.getElementById("navbar").style.backgroundColor = "rgba(0, 0, 0, 0.5)"
-        document.getElementById("navbar").style.backdropFilter = "blur(1em)"
-    } else {
-        document.getElementById("navbar").style.backgroundColor = "rgba(0, 0, 0, 0)"
-        document.getElementById("navbar").style.backdropFilter = "blur(0)"
-    }
-})
-
+loadScript("global.js")
 loadScript("imageCarousel.js")
-loadScript("menubar.js")

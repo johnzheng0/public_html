@@ -128,3 +128,6 @@ footer .divider {
     .navbarItems .menu {display: flex}
     body {background-size: 200%}
 }
+@media (min-width: 1000px) {
+    #menubar {display: none}
+}

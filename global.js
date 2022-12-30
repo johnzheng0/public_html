@@ -1,6 +1,19 @@
 //get page elements
 let menubar = document.getElementById("menubar")
 let menu = document.getElementsByClassName("menu")[0]
+let navbar = document.getElementById("navbar")
+
+//scroll event
+window.addEventListener("scroll", function() {
+    document.body.style.backgroundPositionY = scrollY*0.6 + "px"
+    if (scrollY > 10) {
+        navbar.style.backgroundColor = "rgba(0, 0, 0, 0.5)"
+        navbar.style.backdropFilter = "blur(1em)"
+    } else {
+        navbar.style.backgroundColor = "rgba(0, 0, 0, 0)"
+        navbar.style.backdropFilter = "blur(0)"
+    }
+})
 
 //define animation parameters
 let flyIn = [
