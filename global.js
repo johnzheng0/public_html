@@ -2,13 +2,13 @@ console.log("global.js loaded")
 
 //scroll event
 window.addEventListener("scroll", function() {
-    document.body.style.backgroundPositionY = scrollY*0.5 + "px"
+    document.body.style.backgroundPositionY = scrollY*0.2 + "px"
     if (scrollY > 10) {
         document.querySelector("#navbar").style.backgroundColor = "rgba(0, 0, 0, 0.5)"
-        document.querySelector("#navbar").style.backdropFilter = "blur(1em)"
+        // document.querySelector("#navbar").style.backdropFilter = "blur(1em)"
     } else {
         document.querySelector("#navbar").style.backgroundColor = "rgba(0, 0, 0, 0)"
-        document.querySelector("#navbar").style.backdropFilter = "blur(0)"
+        // document.querySelector("#navbar").style.backdropFilter = "blur(0)"
     }
 })
 
