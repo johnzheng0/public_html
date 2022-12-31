@@ -32,7 +32,7 @@
     align-items: center;
     gap: 0.2em;
 
-    margin-top: 300px;
+    margin-top: 10em;
 }
 .aboutContent .aboutLinks .icon {
     width: auto;
@@ -68,6 +68,7 @@
 }
 .projectList ul {
     margin-top: -15px;
+    font-weight: normal;
 }
 .projectList .projectDivider {
     width: 100%;
@@ -85,7 +86,13 @@
         
         border-radius: 32px;
     }
+    #aboutme .aboutLinks {
+        margin-top: 2em;
+    }
     #aboutme .aboutBackdrop {
         display: none;
+    }
+    #projects .projectList {
+        width: 80%;
     }
 }

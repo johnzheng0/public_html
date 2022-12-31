@@ -40,7 +40,7 @@ function eventMenu() {
     }
 }
 
-//adds new element to html
+//get html file and add it to page as element
 function include(element) {
     let newelem = document.createElement("div")
     fetch(element.href)
