@@ -1,0 +1,17 @@
+#error {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    width: 100%;
+}
+.errorMessage {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 20em;
+}
+.errorMessage img {
+    width: 200px;
+}
