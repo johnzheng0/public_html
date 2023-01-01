@@ -17,7 +17,7 @@ html, body {
     right: 0;
     bottom: 0;
     width: 100%;
-  }
+}
 
 .parallaxLayer {
     position: absolute;
@@ -25,12 +25,14 @@ html, body {
     right: 0;
     bottom: 0;
     left: 0;
-    
-    
+        
+    width: 100%;
 }
 .parallaxImage {
     position: absolute;
     bottom: 0;
+
+    width: 100%;
 }
 
 .parallaxLayer1 {transform: translateZ(-100px) scale(2)}
@@ -56,9 +58,13 @@ html, body {
 @media (max-width: 1000px) {
     #parallax {
         padding-top: 0em;
-        top: -20%;
+        top:-25%;
     }
     .parallaxLayer {
         left: -20%;
+        width: auto;
+    }
+    .parallaxImage {
+        width: auto;
     }
 }
