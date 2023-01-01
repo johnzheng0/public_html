@@ -8,6 +8,7 @@ html, body {
 #parallax {
     perspective: 100px;
     height: 100vh;
+    padding-top: 5em;
     overflow-x: hidden;
     overflow-y: auto;
     position: absolute;
