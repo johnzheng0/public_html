@@ -8,4 +8,5 @@ function loadScript(url)
 }
 
 loadScript("global.js")
-loadScript("imageCarousel.js")
+loadScript("modules/imageCarousel.js")
+loadScript("modules/quoteViewer.js")
