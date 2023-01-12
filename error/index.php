@@ -14,13 +14,15 @@
     </head>
 
     <body>
-        <link class="include" href="../navbar.html"/>
+        <link class="include" href="/navbar.html"/>
         <div id="error">
             <div class="errorMessage">
-                <label>404</label>
+                <label>
+                    <?php echo $_SERVER['REDIRECT_STATUS'] ?>
+                </label>
                 <img src="/404/thinker.png">
             </div>
         </div>
-        <link class="include" href="../footer.html"/>
+        <link class="include" href="/footer.html"/>
     </body>
 </html>
