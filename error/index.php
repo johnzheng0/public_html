@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!DOCTYPE php>
 <html>
     <head> 
         <link href="/favicon.io"
@@ -7,10 +7,10 @@
         <link href="/global.css" 
         rel="stylesheet" 
         type="text/css"/>
-        <link href="/404/index.css" 
+        <link href="/error/stle.css" 
         rel="stylesheet" 
         type="text/css"/>
-        <script type="text/javascript" src="/404/index.js"></script>
+        <script type="text/javascript" src="/error/script.js"></script>
     </head>
 
     <body>
@@ -20,7 +20,7 @@
                 <label>
                     <?php echo $_SERVER['REDIRECT_STATUS'] ?>
                 </label>
-                <img src="/404/thinker.png">
+                <img src="/error/thinker.png">
             </div>
         </div>
         <link class="include" href="/footer.html"/>
