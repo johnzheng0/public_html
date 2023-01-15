@@ -7,7 +7,7 @@
         <link href="/global.css" 
         rel="stylesheet" 
         type="text/css"/>
-        <link href="/error/stle.css" 
+        <link href="/error/style.css" 
         rel="stylesheet" 
         type="text/css"/>
         <script type="text/javascript" src="/error/script.js"></script>
