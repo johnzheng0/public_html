@@ -29,14 +29,15 @@ let flyDuration = {
 
 //add event handler to toggle the menu when the menu icon is pressed
 function eventMenu() {
-    if (document.querySelector("#menubar").style.display == "none") {
-        document.querySelector("#menubar").style.display = "block"
-        document.querySelector("#menubar").animate(flyIn, flyDuration)
-    } else {
+    console.log("log")
+    if (document.querySelector("#menubar").style.display == "block") {
         document.querySelector("#menubar").animate(flyOut, flyDuration)
         setTimeout(function() {
             document.querySelector("#menubar").style.display = "none"
         }, flyDuration.duration*0.9)
+    } else {
+        document.querySelector("#menubar").style.display = "block"
+        document.querySelector("#menubar").animate(flyIn, flyDuration)
     }
 }
 
