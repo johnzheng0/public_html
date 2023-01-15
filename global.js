@@ -29,7 +29,6 @@ let flyDuration = {
 
 //add event handler to toggle the menu when the menu icon is pressed
 function eventMenu() {
-    console.log("log")
     if (document.querySelector("#menubar").style.display == "block") {
         document.querySelector("#menubar").animate(flyOut, flyDuration)
         setTimeout(function() {
